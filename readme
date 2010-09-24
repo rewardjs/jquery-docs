@@ -1,0 +1,9 @@
+Various pieces of functionality that need to be documented:
+* standard plugins, .e.g., .position()
+* standard plugin overrides, e.g., .show()
+* selectors, e.g., :focusable
+* widgets, e.g., .dialog()
+* the widget factory - $.widget, $.widget.bridge, $.Widget
+* base widgets, e.g., $.ui.mouse
+* easings, e.g., easeInOutQuad
+* effects, e.g., pulse
