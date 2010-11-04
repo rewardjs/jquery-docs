@@ -1,0 +1,29 @@
+<entries>
+<entry type='method' name="stop" return="undefined" plugin="QUnit">
+  <signature>
+	<argument name="timeout" type="Integer" optional="true">
+		<desc>Optional argument to fail the test after the given timeout. In milliseconds.</desc>
+	</argument>
+  </signature>
+  <desc>Stop the testrunner to wait to async tests to run. Call start() to continue.</desc> 
+
+  <longdesc>
+    <p>The optional timeout argument makes tests undeterministic and should be avoided. It can be helpful when debugging tests that never finish, that is, start() is never called.</p>
+	<p>On Blackberry 5.0, window.stop is a native read-only function. If you deal with that browser, use QUnit.stop() instead, which will work anywhere.</p>
+  </longdesc>
+
+  <example height="250">
+    <desc>Add a test that contains a single assertions that is always true.</desc>
+
+  <code><![CDATA[
+test("a test", function() {
+  stop(1000); // wait 1 second
+  $.getJSON("/someurl", function(result) {
+    equals(result.value, "someExpectedValue");
+    start();
+  });
+});
+  ]]></code>
+  </example>
+</entry>
+</entries>
