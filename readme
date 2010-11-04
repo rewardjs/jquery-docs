@@ -1,4 +1,7 @@
-Various pieces of functionality that need to be documented:
+Getting started: Included is an Ant-based build. Run ant transform example
+xml files to html. The build.xml file itself is excluded.
+
+We need examples, to ensure that we can document them, for all these:
 * standard plugins, .e.g., .position()
 * standard plugin overrides, e.g., .show()
 * selectors, e.g., :focusable
