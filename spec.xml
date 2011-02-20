@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!-- pipe is an OR - to denote possible values -->
+<entry name="functionName" namespace="ui" type="method|plugin|property|widget" return="jQuery|Map|jqXHR|String|Array">
+  <created>1.0</created>
+  
+  <!-- indication of how far back documentation goes -->
+  <signature added="1.5">
+    <!-- added != version -  a 1.3 added signature will still be updated if viewing the 1.5 version -->
+    <argument name="" type="String|Boolean|DOM|Function|Array">
+      <desc/>
+    </argument>
+    <!-- pulls from options node -->
+    <argument name="options" type="Options">
+      <desc>A string containing the URL to which the request is sent.</desc>
+    </argument>
+  </signature>
+  
+  <options>
+    <option default="value|auto" default-note="" name="" type="Boolean|jQuery|DOM">
+      <desc/>
+    </option>
+    <!-- auto means it's a calculated option based on other options - you can note what in 'default-note'
+					array="true" means it can accept an array of these as well.
+					The optinon below, while working in the context of argument.@type == Map
+					also work as standalone argument types (for the sake of documenting once)-->
+    <option default="value|auto" default-note="" name="" type="Function" array="true">
+      <desc/>
+      
+      <parameter name="" type="Boolean|jQuery|DOM">
+        <desc/>
+      </parameter>
+      
+      <parameter name="" type="String" null="true">
+        <!-- might be sent null values -->
+        <desc/>
+        <value name=""/>
+        <value name=""/>
+        <value name="abort"/>
+        <value name="parsererror"/>
+      </parameter>
+      
+      <parameter name="" type="Object|Array" null="true">
+        <desc/>
+        <property type="String|DOM">
+          <desc/>
+        </property>
+        <!-- type Object means nested properties -->
+        <property type="Object">
+          <desc/>
+          <property>
+            <desc/>
+          </property>
+        </property>
+        <property type="Function">
+          <desc/>
+          <argument name="" type="" return="">
+            <desc/>
+          </argument>
+        </property>
+      </parameter>
+      
+      <!-- see Function type for argument.option.@type == function -->
+      <parameter name="" type="Function">
+			</parameter>
+			
+    </option>
+    
+    <option default="value|auto" default-note="" name="" type="Function">
+      <desc/>
+      <argument name="" type="Boolean|String|Object|Array|DOM|jQuery" return="">
+        <desc/>
+      </argument>
+    </option>
+  </options>
+  
+  <events>
+    <!-- same implementation as Function (arguments, return) -->
+    <event name="">
+      <desc/>
+      <argument name="event" type="Event">
+        <desc/>
+        <!-- any custom properties on the event -->
+        <property name="" type=""/>
+      </argument>
+    </event>
+  </events>
+  
+</entry>
