@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<entry name="accordion" namespace="ui" type="widget" return="jQuery">
+	<created>1.0</created>
+	<signature added="1.0">
+		<argument name="options" type="Options">
+			<desc>Options for initializing the accordion</desc>
+		</argument>
+	</signature>
+	<signature added="1.5">
+		<argument name="method" type="Methods">
+			<desc>Call a method by passing the method name as the first argument. All additional arguments are passed as arguments to the method.</desc>
+		</argument>
+	</signature>
+	<options>
+		<option name="active" type="Integer|Boolean" default="0">
+			<desc>Select the active (open) panel by zero-based index. Negative values select backward from the last. When collapsible: true, active: false closees the accordion, otherwise setting active to false will have no effect.</desc>
+		</option>
+		<option name="animated" type="String|Boolean" default="slide">
+			<desc>Choose your favorite animation, or disable them (set to false). In addition to the default, 'bounceslide' and all defined easing methods are supported ('bounceslide' requires UI Effects Core).</desc>
+		</option>
+		<option name="collapsible" type="Boolean" default="false">
+			<desc>Whether all the sections can be closed at once. Allows collapsing the active section by the triggering event (click is the default).</desc>
+		</option>
+		<option name="event" type="String" default="click">
+			<desc>The event on which to trigger the accordion. For hover, use 'mouseover'.</desc>
+		</option>
+		<option name="header" type="String" default="&#x3E; li &#x3E; :first-child, &#x3E; :not(li):even">
+			<desc>Selector for the header element. Must be a selector that applies to the accordion container element, via .find(). The default covers both ui/li accordions, as well as flat structures like dl/dt/dd</desc>
+		</option>
+		<option name="heightStyle" type="String" default="auto">
+			<desc>
+				<p>Controls the height of the accordion and each panel.</p>
+				<p>Possible values:</p>
+				<dl>
+					<dt>auto</dt>
+						<dd>all panels will be set to the height of the tallest panel</dd>
+					<dt>fill</dt>
+						<dd>expand to the available height based on the accordion's parent height</dd>
+					<dt>content</dt>
+						<dd>each panel will only be as tall as its content</dd>
+				</dl>
+			</desc>
+		</option>
+		<option name="icons" type="Object" default="{ &#x22;header&#x22;: &#x22;ui-icon-triangle-1-e&#x22;, &#x22;headerSelected&#x22;: &#x22;ui-icon-triangle-1-s&#x22; }">
+			<desc>Icons to use for headers. Icons may be specified for 'header' and 'headerSelected', and we recommend using the icons native to the jQuery UI CSS Framework manipulated by <a href="http://www.themeroller.com/">jQuery UI ThemeRoller</a></desc>
+		</option>
+	</options>
+	<methods>
+		<method name="refresh">
+			<desc>
+				Recomputes panel dimensions.
+			</desc>
+		</method>
+	</methods>
+	<events>
+		<event name="beforeActivate" type="accordionbeforeactive">
+			<desc>
+				Triggered directly after a panel is activated. Can be cancelled to prevent the panel from activating.
+			</desc>
+			<argument name="event" type="Event">
+				<desc>
+					Type depends on event option. Commonly would be click or mouseover.
+				</desc>
+			</argument>
+			<argument name="ui" type="Object">
+				<desc>
+					Extra event data for the ui accordion beforeActivate event
+				</desc>
+				<property name="newContent" type="jQuery" />
+				<property name="newHeader" type="jQuery" />
+				<property name="oldContent" type="jQuery" />
+				<property name="oldHeader" type="jQuery" />
+			</argument>
+		</event>
+		<event name="activate" type="accordionactivate">
+			<desc>
+				Triggered after the accordion panel has be activated (after animation completes).
+			</desc>
+			<argument name="event" type="Event" null="true">
+			</argument>
+			<argument name="ui" type="Object">
+				<desc>
+					Extra event data for the ui accordion activate event
+				</desc>
+				<property name="newContent" type="jQuery" />
+				<property name="newHeader" type="jQuery" />
+				<property name="oldContent" type="jQuery" />
+				<property name="oldHeader" type="jQuery" />
+			</argument>
+		</event>
+	</events>
+</entry>
