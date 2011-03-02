@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<entry name="animate" namespace="fn" type="method" return="jQuery" version="1.4">
+	<created>1.0</created>
+	
+	<signature added="1.0">
+		<argument name="properties" type="Object">
+			<desc>A map of CSS properties that the animation will move toward.</desc>
+		</argument>
+		<argument name="duration" type="Option"/>
+		<argument name="easing" type="Option"/>
+		<argument name="complete" type="Option"/>
+	</signature>
+	<signature added="1.0">
+		<argument name="properties" type="Object">
+			<desc>A map of CSS properties that the animation will move toward.</desc>
+		</argument>
+		<argument name="options" type="Options">
+			<desc>A map of additional options to pass to the method</desc>
+		</argument>
+	</signature>
+	
+	<options>
+		<option name="duration" type="Number|String" default="0">
+			<desc>A string or number determining how long the animation will run.</desc>
+		</option>
+		<option name="easing" type="String" default="linear">
+			<desc>A string indicating which easing function to use for the transition.</desc>
+		</option>
+		<option name="complete" type="Function">
+			<desc>A function to call once the animation is complete.</desc>
+			<!-- no parameters -->
+		</option>
+		<option name="step" type="Function">
+			<desc> A function to be called after each step of the animation.</desc>
+			<parameter name="now" type="Number">
+				<desc>the numeric value of the property being animated at each step</desc>
+			</parameter>
+			<parameter name="fx" type="Object">
+				<desc>the numeric value of the property being animated at each step</desc>
+				<property name="elem" type="DOM">
+					<desc>the animated element</desc>
+				</property>
+				<property name="start" type="Number">
+					<desc>The first value of the animated property</desc>
+				</property>
+				<property name="end" type="Number">
+					<desc>The last value of the animated property</desc>
+				</property>
+				<property name="prop" type="String">
+					<desc>The property being animated</desc>
+				</property>
+			</parameter>
+		</option>
+		<option name="queue" type="Boolean" default="0">
+			<desc>A Boolean indicating whether to place the animation in the effects queue. If false, the animation will begin immediately.</desc>
+		</option>
+		<option name="specialEasing" type="Object" default="0">
+			<desc>A map of one or more of the CSS properties defined by the properties argument and their corresponding easing functions (added 1.4).</desc>
+		</option>
+	</options>
+	
+	<!-- no methods -->
+	
+	<!-- no events -->
+	
+	<desc>Perform a custom animation of a set of CSS properties.</desc>
+	<longdesc>The <code>.animate()</code> method allows us to create animation effects on any numeric CSS property. The only required parameter is a map of CSS properties. This map is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive. 
+	
+	...
+	
+		<section><h3>Per-property Easing</h3><p><![CDATA[
+				As of jQuery version 1.4, you can set per-property easing functions within a single .animate() call. In the first version of .animate(), each property can take an array as its value: The first member of the array is the CSS property and the second member is an easing function. If a per-property easing function is not defined for a particular property, it uses the value of the .animate() method's optional easing argument. If the easing argument is not defined, the default swing function is used.
+
+				For example, to simultaneously animate the width and height with the swing easing function and the opacity with the linear easing function:
+			]]></p>
+			
+			<example src="jquery/animate/examples/per-property.html"/></section>
+	</longdesc>
+</entry>
