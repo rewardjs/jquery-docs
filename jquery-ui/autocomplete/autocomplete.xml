@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<entry name="animate" namespace="fn" type="method" return="jQuery" version="1.4">
+	<created>1.7</created>
+	
+	<signature added="1.7">
+		<argument name="properties" type="Object" optional="true">
+			<desc>A map of options to customize the behavior of autocomplete</desc>
+		</argument>
+	</signature>
+	
+	<options>
+		<option name="disabled" type="Boolean" default="false">
+			<desc>Disables (true) or enables (false) the autocomplete. Can be set when initializing (first creating) the autocomplete.</desc>
+		</option>
+		<option name="appendTo" type="Selector" default="body">
+			<desc>Which element the menu should be appended to.</desc>
+		</option>
+		<option name="delay" type="Integer" default="300">
+			<desc>The delay in milliseconds the Autocomplete waits after a keystroke to activate itself. A zero-delay makes sense for local data (more responsive), but can produce a lot of load for remote data, while being less responsive.</desc>
+			<!-- no parameters -->
+		</option>
+		<option name="minLength" type="Integer" default="1">
+			<desc>The minimum number of characters a user has to type before the Autocomplete activates. Zero is useful for local data with just a few items. Should be increased when there are a lot of items, where a single character would match a few thousand items.</desc>
+			<!-- no parameters -->
+		</option>
+		<option name="source" type="String|Array|Function">
+			<desc>Defines the data to use, must be specified. See Overview section for more details, and look at the various demos.</desc>
+			
+			<parameter name="request" type="Object">
+				<desc>A request object, with a single property called "term", which refers to the value currently in the text input.</desc>
+				<property name="term" type="String">
+					<desc>The text that was entered into the autocomplete's input.</desc>
+				</property>
+			</parameter>
+			<parameter name="response" type="Callback">
+				<desc>A response callback, which must be called with the data to display in the autocomplete suggestions.</desc>
+				<argument name="data" type="Array">
+				    <desc>Either an array of strings or objects to populate the autocomplete suggestions with.</desc>
+				     <value type="String"/>
+             <value type="Object">
+               <property name="label" type="String">
+                 <desc>Text label to display</desc>
+               </property>
+               <property name="value" >
+                  <desc>Associated value with displayed label</desc>
+               </property>               
+             </value>
+			  </argument>
+		</option>
+	</options>
+	
+	<!-- no methods -->
+	
+	<!-- no events -->
+	
+	<desc>Display matching values while a user types in an input field</desc>
+	<longdesc>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
+
+  By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.
+
+  This can be used to enter previous selected values, for example you could use Autocomplete for entering tags, to complete an address, you could enter a city name and get the zip code, or maybe enter email addresses from an address book.
+	</longdesc>
+</entry>
