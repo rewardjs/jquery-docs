@@ -1,0 +1,8 @@
+<entry name="slider" namespace="fn" type="Widget" widgetnamespace="ui" widgeteventprefix="slide">
+  <created>1.7</created>
+  <options>
+    <option name="animate">
+      
+    </option>
+  </option>
+</entry>
