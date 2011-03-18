@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <entry name="widget" namespace="fn" widgetnamespace="ui">
-	<signature added="1.0">
+	<signature returns="jQuery">
 		<desc>Initialize the widget.</desc>
 		<argument name="options" type="Options" optional="true">
 			<desc>A map of options to override defaults on initialization.</desc>
 		</argument>
 	</signature>
-	<signature added="1.5">
+	<signature>
 		<desc>Call a widget method after initialization.</desc>
 		<argument name="method" type="Methods">
 			<desc>The name of the method to call.</desc>
@@ -44,7 +44,7 @@
 				<argument name="optionName" type="String">
 				</argument>
 			</signature>
-			<signature>
+			<signature returns="jQuery">
 				<desc>
 					Set the value of the specified <entryname/> option.
 				</desc>
@@ -53,7 +53,7 @@
 				<argument name="value" type="*">
 				</argument>
 			</signature>
-			<signature>
+			<signature returns="jQuery">
 				<desc>
 					Set multiple <entryname/> options at once by providing an options map.
 				</desc>
