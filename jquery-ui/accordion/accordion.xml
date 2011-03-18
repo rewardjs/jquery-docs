@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<entry name="accordion" namespace="ui" type="widget" return="jQuery">
+<entry name="accordion" namespace="fn" widgetnamespace="ui" type="widget">
 	<created>1.0</created>
 	<signature added="1.0">
-		<argument name="options" type="Options">
+		<argument name="options" type="Options" optional="true">
 			<desc>Options for initializing the accordion</desc>
 		</argument>
 	</signature>

@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
-<entry name="animate" namespace="fn" type="method" return="jQuery" version="1.4">
+<entry name="animate" namespace="fn" widgetnamespace="ui" type="method">
 	<created>1.7</created>
-	
 	<signature added="1.7">
-		<argument name="properties" type="Object" optional="true">
-			<desc>A map of options to customize the behavior of autocomplete</desc>
+		<desc></desc>
+		<argument name="options" type="Options" optional="true">
+			<desc>A map of options to override defaults on initialization</desc>
 		</argument>
 	</signature>
-	
+	<signature added="1.7">
+		<desc>Call a method by passing the method name as the first argument. All additional arguments are passed as arguments to the method.</desc>
+		<argument name="method" type="Methods">
+			<desc></desc>
+		</argument>
+	</signature>
 	<options>
 		<option name="disabled" type="Boolean" default="false">
 			<desc>Disables (true) or enables (false) the autocomplete. Can be set when initializing (first creating) the autocomplete.</desc>
@@ -25,7 +30,6 @@
 		</option>
 		<option name="source" type="String|Array|Function">
 			<desc>Defines the data to use, must be specified. See Overview section for more details, and look at the various demos.</desc>
-			
 			<parameter name="request" type="Object">
 				<desc>A request object, with a single property called "term", which refers to the value currently in the text input.</desc>
 				<property name="term" type="String">
@@ -48,11 +52,8 @@
 			  </argument>
 		</option>
 	</options>
-	
 	<!-- no methods -->
-	
 	<!-- no events -->
-	
 	<desc>Display matching values while a user types in an input field</desc>
 	<longdesc>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
 
