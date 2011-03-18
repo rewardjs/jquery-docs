@@ -2,13 +2,13 @@
 <entry name="accordion" namespace="fn" widgetnamespace="ui" type="widget">
 	<created>1.0</created>
 	<signature added="1.0">
-		<desc></desc>
+		<desc>Initialize the widget.</desc>
 		<argument name="options" type="Options" optional="true">
 			<desc>A map of options to override defaults on initialization.</desc>
 		</argument>
 	</signature>
 	<signature added="1.5">
-		<desc>Call a method by passing the method name as the first argument.</desc>
+		<desc>Call a widget method after initialization.</desc>
 		<argument name="method" type="Methods">
 			<desc>The name of the method to call.</desc>
 		</argument>
