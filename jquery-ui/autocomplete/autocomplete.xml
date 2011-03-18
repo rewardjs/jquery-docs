@@ -1,25 +1,7 @@
 <?xml version="1.0"?>
 <entry name="animate" namespace="fn" widgetnamespace="ui" type="method">
 	<created>1.7</created>
-	<signature added="1.7">
-		<desc>Initialize the widget.</desc>
-		<argument name="options" type="Options" optional="true">
-			<desc>A map of options to override defaults on initialization</desc>
-		</argument>
-	</signature>
-	<signature added="1.7">
-		<desc>Call a widget method after initialization.</desc>
-		<argument name="method" type="Methods">
-			<desc>The name of the method to call.</desc>
-		</argument>
-		<argument name="..." type="Rest" optional="true">
-			<desc>All additional arguments are passed as arguments to the method.</desc>
-		</argument>
-	</signature>
 	<options>
-		<option name="disabled" type="Boolean" default="false">
-			<desc>Disables (true) or enables (false) the autocomplete. Can be set when initializing (first creating) the autocomplete.</desc>
-		</option>
 		<option name="appendTo" type="Selector" default="body">
 			<desc>Which element the menu should be appended to.</desc>
 		</option>
@@ -55,8 +37,10 @@
 			  </argument>
 		</option>
 	</options>
-	<!-- no methods -->
-	<!-- no events -->
+	<methods>
+	</methods>
+	<events>
+	</events>
 	<desc>Display matching values while a user types in an input field</desc>
 	<longdesc>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
 
