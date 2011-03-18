@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="accordion" namespace="fn" widgetnamespace="ui" type="widget">
+<entry name="accordion" namespace="fn" type="Widget" widgetnamespace="ui">
 	<created>1.0</created>
 	<options>
 		<option name="active" type="Integer|Boolean" default="0">
