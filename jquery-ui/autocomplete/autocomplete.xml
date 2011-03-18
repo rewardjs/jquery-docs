@@ -8,9 +8,12 @@
 		</argument>
 	</signature>
 	<signature added="1.7">
-		<desc>Call a method by passing the method name as the first argument. All additional arguments are passed as arguments to the method.</desc>
+		<desc>Call a method by passing the method name as the first argument.</desc>
 		<argument name="method" type="Methods">
-			<desc></desc>
+			<desc>The name of the method to call.</desc>
+		</argument>
+		<argument name="..." type="Rest" optional="true">
+			<desc>All additional arguments are passed as arguments to the method.</desc>
 		</argument>
 	</signature>
 	<options>
