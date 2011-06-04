@@ -93,7 +93,7 @@
 					<xsl:variable name="option-name" select="@name" />
 					<xsl:variable name="option-type" select="@type" />
 					<dt>
-						<xsl:attribute name="id"><xsl:value-of select="$entry-name" />-<xsl:value-of select="$option-name" /></xsl:attribute>
+						<xsl:attribute name="id">option-<xsl:value-of select="$option-name" /></xsl:attribute>
 						<xsl:if test="added">
 							<span class="versionAdded">version added: <xsl:value-of select="added" /></span>
 						</xsl:if>
