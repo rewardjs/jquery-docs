@@ -24,17 +24,18 @@
 			<parameter name="response" type="Callback">
 				<desc>A response callback, which must be called with the data to display in the autocomplete suggestions.</desc>
 				<argument name="data" type="Array">
-				    <desc>Either an array of strings or objects to populate the autocomplete suggestions with.</desc>
-				     <value type="String"/>
-             <value type="Object">
-               <property name="label" type="String">
-                 <desc>Text label to display</desc>
-               </property>
-               <property name="value" >
-                  <desc>Associated value with displayed label</desc>
-               </property>               
-             </value>
-			  </argument>
+					<desc>Either an array of strings or objects to populate the autocomplete suggestions with.</desc>
+					<value type="String"/>
+					<value type="Object">
+						<property name="label" type="String">
+							 <desc>Text label to display</desc>
+						</property>
+						<property name="value" >
+							<desc>Associated value with displayed label</desc>
+						</property>
+					</value>
+				</argument>
+			</parameter>
 		</option>
 	</options>
 	<methods>
@@ -44,8 +45,8 @@
 	<desc>Display matching values while a user types in an input field</desc>
 	<longdesc>Autocomplete, when added to an input field, enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
 
-  By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.
+	By giving an Autocomplete field focus or entering something into it, the plugin starts searching for entries that match and displays a list of values to choose from. By entering more characters, the user can filter down the list to better matches.
 
-  This can be used to enter previous selected values, for example you could use Autocomplete for entering tags, to complete an address, you could enter a city name and get the zip code, or maybe enter email addresses from an address book.
+	This can be used to enter previous selected values, for example you could use Autocomplete for entering tags, to complete an address, you could enter a city name and get the zip code, or maybe enter email addresses from an address book.
 	</longdesc>
 </entry>

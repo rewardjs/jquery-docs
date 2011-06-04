@@ -1,8 +1,9 @@
+<?xml version="1.0"?>
 <entry name="slider" namespace="fn" type="Widget" widgetnamespace="ui" widgeteventprefix="slide">
-  <created>1.7</created>
-  <options>
-    <option name="animate">
-      
-    </option>
-  </option>
+	<created>1.7</created>
+	<options>
+		<option name="animate">
+
+		</option>
+	</options>
 </entry>
