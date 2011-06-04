@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <entry name="blind" namespace="effect" type="effect">
 	<desc>
-		The blind effect hides or shows an element by wrapping the element in an <code>overflow:hidden</code> container, 
+		The blind effect hides or shows an element by wrapping the element in an <code>overflow:hidden</code> container, and "pulling the blinds"
 	</desc>
 	<options>
 		<option name="mode" type="String" default='"hide"'>
