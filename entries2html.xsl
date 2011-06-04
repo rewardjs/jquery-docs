@@ -86,6 +86,30 @@
       	</p>
       </xsl:otherwise>
     </xsl:choose>
+	<xsl:if test="options">
+		<h3>Options</h3>
+		<dl>
+			<xsl:for-each select="options[1]/option">
+				<xsl:variable name="option-name" select="@name" />
+				<xsl:variable name="option-type" select="@type" />
+				<dt>
+					<xsl:attribute name="id"><xsl:value-of select="$entry-name" />-<xsl:value-of select="$option-name" /></xsl:attribute>
+					<xsl:if test="added">
+						<span class="versionAdded">version added: <xsl:value-of select="added" /></span>
+					</xsl:if>
+					<h4 class="name">
+						<xsl:value-of select="$option-name" />
+					</h4>
+					<span class="type"><xsl:value-of select="$option-type" /></span>
+					<xsl:if test="@default">
+						<span class="default">default: <xsl:value-of select="@default" /></span>
+					</xsl:if>
+				</dt>
+				<dd><xsl:copy-of select="desc/node()" /></dd>
+			</xsl:for-each>
+		</dl>
+	</xsl:if>
+	<xsl:if test="signature">
     <h3>Signatures:</h3>
   	<ul class="signatures">
   		<xsl:for-each select="signature">
@@ -121,6 +145,7 @@
   			</li>
   		</xsl:for-each>
   	</ul>
+	</xsl:if>
   	<xsl:if test="longdesc/*">
     	<h3>Description:</h3>
     	<div class="longdesc">

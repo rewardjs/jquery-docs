@@ -4,7 +4,7 @@
 		The blind effect hides or shows an element by wrapping the element in an <code>overflow:hidden</code> container, 
 	</desc>
 	<options>
-		<option name="mode" type="string" default="hide">
+		<option name="mode" type="String" default='"hide"'>
 			<desc>
 				<p>UI Effect Mode</p>
 				<p>Possible Values: </p>
@@ -18,7 +18,7 @@
 				</dl>
 			</desc>
 		</option>
-		<option name="direction" type="string" default="up">
+		<option name="direction" type="String" default='"up"'>
 			<desc>
 				<p>The direction the blind will be pulled to "hide" the element., or the direction from which the element will be revealed.</p>
 				<p>Possible Values</p>
@@ -35,7 +35,7 @@
 		<option name="duration" type="Number" default="400">
 			<desc>The number of ms the animation will run for</desc>
 		</option>
-		<option name="easing" type="string" default="swing">
+		<option name="easing" type="String" default='"swing"'>
 			<desc>The easing function to use</desc>
 		</option>
 		<option name="complete" type="function">
