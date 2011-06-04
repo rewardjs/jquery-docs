@@ -77,15 +77,11 @@
 		<span class="desc"><xsl:value-of select="desc" /></span>
 	</h2>
 	<div class="entry-details">
-		<xsl:choose>
-			<xsl:when test="$entry-type='selector'">
-			</xsl:when>
-			<xsl:otherwise>
-				<p class="returns">
-					Returns: <a class="return" href="/Types#{@return}"><xsl:value-of select="@return" /></a>
-				</p>
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:if test="@return">
+			<p class="returns">
+				Returns: <a class="return" href="/Types#{@return}"><xsl:value-of select="@return" /></a>
+			</p>
+		</xsl:if>
 		<xsl:if test="options">
 			<h3>Options</h3>
 			<dl>
