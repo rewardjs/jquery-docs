@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<entry name="animate" namespace="fn" type="Widget" widgetnamespace="ui">
+<entry name="autocomplete" namespace="fn" type="Widget" widgetnamespace="ui">
 	<created>1.7</created>
 	<options>
 		<option name="appendTo" type="Selector" default="body">
