@@ -1,18 +1,18 @@
 <entries>
 <entry type='method' name="rules" return="jQuery" plugin="Validation">
   <signature>
-    <added>1.3</added>
+    <added>1.2</added>
   </signature>
-  <desc>Compile the contents of the matched element as a reusable compiled template.</desc> 
+  <desc>Return the validations rules for the first selected element.</desc>
 
   <longdesc>
-    <p>Note: For information about how to render templates, see <a href="http://api.jquery.com/tmpl">.tmpl()</a> and <a href="http://api.jquery.com/jquery.tmpl">jQuery.tmpl()</a>.</p>
-   
-<pre><![CDATA[
-  
-]]></pre>
-
-  </longdesc>
+    <p>There are several ways to specify validation rules.
+<ul>
+<li>Validation methods without parameters can be specified as classes on the element (recommended)</li>
+<li>Validation methods with parameters can be specified as attributes (recommended)</li>
+<li>Both can be specified as metadata using the metadata plugin</li>
+<li>Both can be specified using the rules-option of the validate()-method</li>
+</ul></p></longdesc>
 
   <example height="250">
     <desc></desc>
@@ -31,7 +31,7 @@
 <entry type='method' name="rules" return="jQuery" plugin="Validation">
 <signature>
   <added>1.3</added>
-  <argument name="add" type="String">
+  <argument name="&quot;add&quot;" type="String">
     <desc>A string indicating to add a set of rules.</desc>
   </argument>
   <argument name="rules" type="Object">
@@ -40,7 +40,7 @@
 </signature>
 <signature>
   <added>1.3</added>
-  <argument name="remove" type="String">
+  <argument name="&quot;remove&quot;" type="String">
     <desc>A string indicating to remove rules.</desc>
   </argument>
   <argument name="rules" type="String" optional="true">

@@ -5,7 +5,7 @@
 		<desc>Optional argument to fail the test after the given timeout. In milliseconds.</desc>
 	</argument>
   </signature>
-  <desc>Stop the testrunner to wait to async tests to run. Call start() to continue.</desc> 
+  <desc>Stop the testrunner to wait for async tests to run. Call start() to continue.</desc>
 
   <longdesc>
     <p>The optional timeout argument makes tests undeterministic and should be avoided. It can be helpful when debugging tests that never finish, that is, start() is never called.</p>
