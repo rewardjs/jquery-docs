@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!-- pipe is an OR - to denote possible values -->
-<entry name="functionName" namespace="ui" type="method|plugin|property|widget" return="jQuery|Map|jqXHR|String|Array">
+<entry name="functionName" namespace="ui" type="method||plugin||property||widget" return="jQuery||Map||jqXHR||String||Array">
   <created>1.0</created>
   
   <!-- indication of how far back documentation goes -->
   <signature added="1.5">
     <!-- added != version -  a 1.3 added signature will still be updated if viewing the 1.5 version -->
-    <argument name="" type="String|Boolean|DOM|Function|Array">
+    <argument name="" type="String||Boolean||DOM||Function||Array">
       <desc/>
     </argument>
     <!-- pulls from options node -->
@@ -16,22 +16,28 @@
   </signature>
   
   <options>
-    <option default="value|auto" default-note="" name="" type="Boolean|jQuery|DOM">
+    <option default="value|auto" default-note="" name="">
+      <type name="Boolean" />
+      <type name="jQuery" />
+      <type name="DOM" />
       <desc/>
     </option>
     <!-- auto means it's a calculated option based on other options - you can note what in 'default-note'
 					array="true" means it can accept an array of these as well.
 					The optinon below, while working in the context of argument.@type == Map
 					also work as standalone argument types (for the sake of documenting once)-->
-    <option default="value|auto" default-note="" name="" type="Function" array="true">
-      <desc/>
-      
-      <parameter name="" type="Boolean|jQuery|DOM">
+    <option default="value|auto" default-note="" name="" array="true">
+      <type="Function" />
+      <desc/>      
+      <parameter name="">
+        <type name="Boolean" />
+        <type name="jQuery" />
+        <type name="DOM" />
         <desc/>
-      </parameter>
-      
-      <parameter name="" type="String" null="true">
+      </parameter>      
+      <parameter name="" null="true">
         <!-- might be sent null values -->
+        <type name="String" />
         <desc/>
         <value name=""/>
         <value name=""/>
@@ -39,19 +45,25 @@
         <value name="parsererror"/>
       </parameter>
       
-      <parameter name="" type="Object|Array" null="true">
+      <parameter name="" null="true">
+        <type name="Object" />
+        <type name="Array" />
         <desc/>
-        <property type="String|DOM">
+        <property>
+          <type name="String" />
+          <type name="DOM" />
           <desc/>
         </property>
         <!-- type Object means nested properties -->
-        <property type="Object">
+        <property>
+          <type name="Object" />
           <desc/>
           <property>
             <desc/>
           </property>
         </property>
-        <property type="Function">
+        <property>
+          <type name="Function" />
           <desc/>
           <argument name="" type="" return="">
             <desc/>
@@ -60,14 +72,22 @@
       </parameter>
       
       <!-- see Function type for argument.option.@type == function -->
-      <parameter name="" type="Function">
+      <parameter name="">
+        <type name="Function" />
 			</parameter>
 			
     </option>
     
-    <option default="value|auto" default-note="" name="" type="Function">
+    <option default="value|auto" default-note="" name="">
+      <type name="Function" />
       <desc/>
-      <argument name="" type="Boolean|String|Object|Array|DOM|jQuery" return="">
+      <argument name="" return="">
+        <type name="Boolean" />
+        <type name="String" />
+        <type name="Object" />
+        <type name="Array" />
+        <type name="DOM" />
+        <type name="jQuery" />
         <desc/>
       </argument>
     </option>
@@ -77,10 +97,11 @@
     <!-- same implementation as Function (arguments, return) -->
     <event name="">
       <desc/>
-      <argument name="event" type="Event">
+      <argument name="event">
+        <type name="Event" />
         <desc/>
         <!-- any custom properties on the event -->
-        <property name="" type=""/>
+        <property name="" />
       </argument>
     </event>
   </events>
