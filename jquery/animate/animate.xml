@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../entries2html.xsl" ?>
 <entry name="animate" namespace="fn" type="method" return="jQuery" version="1.4">
 	<created>1.0</created>
-	
+
 	<signature added="1.0">
 		<argument name="properties" type="Object">
 			<desc>A map of CSS properties that the animation will move toward.</desc>
@@ -18,7 +19,7 @@
 			<desc>A map of additional options to pass to the method</desc>
 		</argument>
 	</signature>
-	
+
 	<options>
 		<option name="duration" type="Number|String" default="0">
 			<desc>A string or number determining how long the animation will run.</desc>
@@ -58,22 +59,22 @@
 			<desc>A map of one or more of the CSS properties defined by the properties argument and their corresponding easing functions (added 1.4).</desc>
 		</option>
 	</options>
-	
+
 	<!-- no methods -->
-	
+
 	<!-- no events -->
-	
+
 	<desc>Perform a custom animation of a set of CSS properties.</desc>
-	<longdesc>The <code>.animate()</code> method allows us to create animation effects on any numeric CSS property. The only required parameter is a map of CSS properties. This map is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive. 
-	
+	<longdesc>The <code>.animate()</code> method allows us to create animation effects on any numeric CSS property. The only required parameter is a map of CSS properties. This map is similar to the one that can be sent to the .css() method, except that the range of properties is more restrictive.
+
 	...
-	
+
 		<section><h3>Per-property Easing</h3><p><![CDATA[
 				As of jQuery version 1.4, you can set per-property easing functions within a single .animate() call. In the first version of .animate(), each property can take an array as its value: The first member of the array is the CSS property and the second member is an easing function. If a per-property easing function is not defined for a particular property, it uses the value of the .animate() method's optional easing argument. If the easing argument is not defined, the default swing function is used.
 
 				For example, to simultaneously animate the width and height with the swing easing function and the opacity with the linear easing function:
 			]]></p>
-			
+
 			<example src="jquery/animate/examples/per-property.html"/></section>
 	</longdesc>
 </entry>
