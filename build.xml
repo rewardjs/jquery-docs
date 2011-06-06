@@ -2,9 +2,7 @@
 
 	<target name="transform" description="Transform XML via XSL to HTML">
 		<delete dir="docs/" />
-		<xslt includes="*.xml" excludes="build.xml" destdir="docs/" style="entries2html.xsl" />
-		<xslt includes="*/*.xml" excludes="build.xml" destdir="docs/" style="entries2html.xsl" />
-		<xslt includes="*/*/*.xml" excludes="build.xml" destdir="docs/" style="entries2html.xsl" />
+		<xslt includes="**/*.xml" excludes="build.xml" destdir="docs/" style="entries2html.xsl" />
 	</target>
-	
+
 </project>
