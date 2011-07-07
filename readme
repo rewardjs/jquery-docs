@@ -1,12 +1,1 @@
-Getting started: Included is an Ant-based build. Run ant transform example
-xml files to html. The build.xml file itself is excluded.
-
-We need examples, to ensure that we can document them, for all these:
-* standard plugins, .e.g., .position()
-* standard plugin overrides, e.g., .show()
-* selectors, e.g., :focusable
-* widgets, e.g., .dialog()
-* the widget factory - $.widget, $.widget.bridge, $.Widget
-* base widgets, e.g., $.ui.mouse
-* easings, e.g., easeInOutQuad
-* effects, e.g., pulse
+See http://wiki.jqueryui.com/w/page/40995891/Docs2xml
