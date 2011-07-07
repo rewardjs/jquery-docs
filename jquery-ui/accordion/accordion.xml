@@ -46,6 +46,17 @@
 				Recomputes panel dimensions.
 			</desc>
 		</method>
+		<method name="explode">
+			<desc>
+				Make the accordion explode
+			</desc>
+			<argument name="pieces" type="Number">
+				<desc>Number of pieces to explode into</desc>
+			</argument>
+			<argument name="implode" type="Boolean" optional="true">
+				<desc>Set to true to make the accordion implode. Leave default-false to explode.</desc>
+			</argument>
+		</method>
 	</methods>
 	<events>
 		<event name="beforeActivate" type="accordionbeforeactive">
@@ -87,5 +98,82 @@
 			</argument>
 		</event>
 	</events>
-	<!-- TODO add examples -->
+	<!-- TODO wrap with 'examples'? -->
+	<example>
+        <desc>Initialize an accordion with default options.</desc>
+        <code><![CDATA[
+		$("#accordion").accordion();
+	]]></code>
+		<html><![CDATA[<div id="accordion">
+		<h3><a href="#">Section 1</a></h3>
+		<div>
+			<p>
+			Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+			</p>
+		</div>
+		<h3><a href="#">Section 2</a></h3>
+		<div>
+			<p>
+			Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+			purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+			</p>
+		</div>
+		<h3><a href="#">Section 3</a></h3>
+		<div>
+			<p>
+			Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+			Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+			</p>
+			<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+			</ul>
+		</div>
+	</div>]]></html>
+	</example>
+	<example>
+        <desc>Initialize an accordion with default options.</desc>
+        <code><![CDATA[
+		$( "#accordion" ).accordion({
+			heightStyle: "fill"
+		});
+	]]></code>
+		<css><![CDATA[
+		.accordion-container {
+			padding: 10px;
+			width: 350px;
+			height: 220px;
+		}
+	]]></css>
+		<html><![CDATA[<div class="accordion-container">
+		<div id="accordion">
+			<h3><a href="#">Section 1</a></h3>
+			<div>
+				<p>
+				Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+				</p>
+			</div>
+			<h3><a href="#">Section 2</a></h3>
+			<div>
+				<p>
+				Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+				purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+				</p>
+			</div>
+			<h3><a href="#">Section 3</a></h3>
+			<div>
+				<p>
+				Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+				Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+				</p>
+				<ul>
+					<li>List item one</li>
+					<li>List item two</li>
+					<li>List item three</li>
+				</ul>
+			</div>
+		</div>
+	</div>]]></html>
+	</example>
 </entry>

@@ -128,7 +128,12 @@
 						<span class="type"><xsl:value-of select="$method-type" /></span>
 					</dt>
 					<dd><xsl:copy-of select="desc/node()" /></dd>
-					<!-- TODO add arguments -->
+					<xsl:if test="argument">
+						<xsl:text> </xsl:text>
+						<ul>
+							<xsl:apply-templates select="argument"/>
+						</ul>
+					</xsl:if>
 				</xsl:for-each>
 			</dl>
 		</xsl:if>
@@ -149,7 +154,6 @@
 						<span class="type"><xsl:value-of select="$event-type" /></span>
 					</dt>
 					<dd><xsl:copy-of select="desc/node()" /></dd>
-					<!-- TODO refactor to reuse elsewhere -->
 					<xsl:if test="argument">
 						<xsl:text> </xsl:text>
 						<ul>
@@ -219,13 +223,15 @@
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
+	&lt;link rel="stylesheet" href="jquery-ui.css" /&gt;<xsl:if test="css">
 	&lt;style type="text/css"&gt;<xsl:copy-of select="css/text()" />&lt;/style&gt;
+</xsl:if>
 	&lt;script type="text/javascript" src="/scripts/jquery-1.4.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="/scripts/jquery-ui.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	<xsl:copy-of select="html/text()" />
-&lt;script&gt;<xsl:copy-of select="code/text()" />&lt;/script&gt;
-
+	&lt;script&gt;<xsl:copy-of select="code/text()" />&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -256,6 +262,7 @@
 
 
 <!-- arguments -->
+<!-- TODO consider optional arguments -->
 <xsl:template match="argument">
 	<li>
 		<xsl:value-of select="@name" />

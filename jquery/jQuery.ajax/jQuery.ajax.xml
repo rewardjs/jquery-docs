@@ -14,6 +14,9 @@
     <added>1.0</added>
     <argument name="settings" type="Map">
       <desc>A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with <a href="/jQuery.ajaxSetup">$.ajaxSetup()</a>.</desc>
+    </argument>
+  </signature>
+  <options>
       <option default="depends on DataType" name="accepts" type="Map">
         <desc>The content type sent in the request header that tells the server what kind of response it will accept in return. If the <code>accepts</code> setting needs modification, it is recommended to do so once in the <code>$.ajaxSetup()</code> method</desc>
       </option>
@@ -149,8 +152,7 @@
 </p>
 </p></desc>
         </option>
-    </argument>
-    </signature>
+    </options>
     <desc>Perform an asynchronous HTTP (Ajax) request.</desc>
     <longdesc>
       <p>The <code>$.ajax()</code> function underlies all Ajax requests sent by jQuery.  It is often unnecessary to directly call this function, as several higher-level alternatives like <code><a href="/jQuery.get">$.get()</a></code> and <code><a href="/load">.load()</a></code> are available and are easier to use. If less common options are required, though, <code>$.ajax()</code> can be used more flexibly.</p>
