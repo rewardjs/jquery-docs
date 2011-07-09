@@ -128,12 +128,7 @@
 						<span class="type"><xsl:value-of select="$method-type" /></span>
 					</dt>
 					<dd><xsl:copy-of select="desc/node()" /></dd>
-					<xsl:if test="argument">
-						<xsl:text> </xsl:text>
-						<ul>
-							<xsl:apply-templates select="argument"/>
-						</ul>
-					</xsl:if>
+					<xsl:call-template name="arguments"/>
 				</xsl:for-each>
 			</dl>
 		</xsl:if>
@@ -154,12 +149,7 @@
 						<span class="type"><xsl:value-of select="$event-type" /></span>
 					</dt>
 					<dd><xsl:copy-of select="desc/node()" /></dd>
-					<xsl:if test="argument">
-						<xsl:text> </xsl:text>
-						<ul>
-							<xsl:apply-templates select="argument"/>
-						</ul>
-					</xsl:if>
+					<xsl:call-template name="arguments"/>
 				</xsl:for-each>
 			</dl>
 		</xsl:if>
@@ -262,6 +252,14 @@
 
 
 <!-- arguments -->
+<xsl:template name="arguments">
+	<xsl:if test="argument">
+		<xsl:text> </xsl:text>
+		<ul>
+			<xsl:apply-templates select="argument"/>
+		</ul>
+	</xsl:if>
+</xsl:template>
 <!-- TODO consider optional arguments -->
 <xsl:template match="argument">
 	<li>
