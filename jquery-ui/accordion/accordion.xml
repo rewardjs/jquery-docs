@@ -6,8 +6,10 @@
 	<longdesc>Long description</longdesc>
 	<created>1.0</created>
 	<options>
-		<option name="active" type="Integer|Boolean" default="0">
+		<option name="active" default="0">
 			<desc>Select the active (open) panel by zero-based index. Negative values select backward from the last. When collapsible: true, active: false closees the accordion, otherwise setting active to false will have no effect.</desc>
+			<type name="Integer" />
+			<type name="Boolean" />
 		</option>
 		<option name="animated" type="String|Boolean" default="slide">
 			<desc>Choose your favorite animation, or disable them (set to false). In addition to the default, 'bounceslide' and all defined easing methods are supported ('bounceslide' requires UI Effects Core).</desc>
